@@ -1,5 +1,5 @@
 
-# 🚩 Cómo clonar este repositorio (principiantes)
+# 🚩 Cómo clonar este repositorio
 
 Sigue estos pasos para obtener una copia de este proyecto en tu computadora:
 
