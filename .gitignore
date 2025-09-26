@@ -1,0 +1,59 @@
+# === Node.js ===
+node_modules/
+*/node_modules/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+.Python
+venv/
+env/
+ENV/
+.mypy_cache/
+.pytest_cache/
+.tox/
+*.egg-info/
+
+# === Database files ===
+*.db
+*.sqlite
+*.sqlite3
+
+# === Logs ===
+*.log
+logs/
+backend/logs/
+
+# === Environment variables ===
+.env*
+
+# === IDE/Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === OS/Filesystem ===
+.DS_Store
+Thumbs.db
+
+# === Build outputs ===
+dist/
+build/
+
+# === Security reports ===
+*_report.txt
+safety_report.txt
+bandit_report.txt
+
+# === Temporary files ===
+*.tmp
+*.temp
+
+# === Lock files (opcional, mantener si se requiere reproducibilidad) ===
+# Pipfile.lock
+# poetry.lock
+
+# === Docker (si aplica) ===
+# .docker/
+# docker-compose.override.yml

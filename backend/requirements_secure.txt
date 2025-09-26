@@ -1,0 +1,39 @@
+# FastAPI and core dependencies - Updated secure versions
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.18  # Updated to fix CVE-2024-53981, PVE-2024-99762
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.13.1
+
+# Security - Updated versions to fix vulnerabilities
+bcrypt==4.1.2
+python-jose[cryptography]==3.4.0  # Updated to fix CVE-2024-33663, CVE-2024-33664
+passlib[bcrypt]==1.7.4
+
+# Rate limiting
+slowapi==0.1.9
+redis==5.0.1
+
+# Validation
+pydantic==2.5.2
+pydantic[email]==2.5.2
+
+# HTTP requests for SSRF protection
+requests==2.31.0
+
+# Environment variables
+python-dotenv==1.0.0
+
+# Testing (development)
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+
+# Security scanning - Updated versions
+safety==3.2.11  # Updated from 2.3.5
+bandit==1.7.7    # Updated to fix PVE-2024-64484
+
+# Additional security tools
+pip-audit==2.7.3  # For dependency vulnerability scanning

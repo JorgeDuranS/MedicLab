@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Nunito Sans', 'Inter', sans-serif;
+    background-color: #F7F9F8;
+    color: #2D4A53;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Lato', sans-serif;
+  }
+}
+
+@layer components {
+  /* Button Components */
+  .btn-primary {
+    @apply bg-mint-500 text-white border-none px-6 py-3 rounded-md font-medium transition-all duration-200 hover:bg-mint-600 focus:outline-none focus:ring-2 focus:ring-mint-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-professional-800 border border-professional-300 px-6 py-3 rounded-md font-medium transition-all duration-200 hover:bg-professional-50 focus:outline-none focus:ring-2 focus:ring-professional-500 focus:ring-offset-2;
+  }
+  
+  /* Card Components */
+  .card {
+    @apply bg-card rounded-card shadow-card p-6 transition-all duration-200;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-card-hover hover:-translate-y-1;
+  }
+  
+  /* Appointment Card */
+  .appointment-card {
+    @apply bg-card rounded-card shadow-card p-4 mb-3 transition-all duration-200 hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+  
+  /* Calendar Components */
+  .calendar {
+    @apply bg-card rounded-calendar shadow-card p-6;
+  }
+  
+  .calendar-day {
+    @apply text-professional-800 p-2 text-center cursor-pointer rounded-full transition-all duration-200 hover:bg-mint-100;
+  }
+  
+  .calendar-day-current {
+    @apply border-2 border-mint-500 rounded-full;
+  }
+  
+  .calendar-day-selected {
+    @apply bg-mint-500 text-white rounded-full;
+  }
+  
+  .calendar-day-with-appointment {
+    @apply relative;
+  }
+  
+  .calendar-day-with-appointment::after {
+    content: '';
+    @apply absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-mint-500 rounded-full;
+  }
+  
+  /* Modal Components */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50;
+  }
+  
+  .modal-content {
+    @apply bg-card rounded-modal shadow-modal max-w-lg w-full mx-4 p-8;
+  }
+  
+  /* Form Components */
+  .form-input {
+    @apply w-full px-4 py-3 border border-professional-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-transparent transition-all duration-200;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-professional-700 mb-2;
+  }
+  
+  .form-error {
+    @apply text-alert text-sm mt-1;
+  }
+  
+  /* Status Components */
+  .status-confirmed {
+    @apply bg-mint-500 text-white px-3 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .status-completed {
+    @apply bg-professional-500 text-white px-3 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .status-cancelled {
+    @apply bg-alert text-white px-3 py-1 rounded-full text-xs font-medium;
+  }
+  
+  /* Layout Components */
+  .dashboard-layout {
+    @apply min-h-screen bg-background;
+  }
+  
+  .dashboard-container {
+    @apply container mx-auto px-4 py-8;
+  }
+  
+  .dashboard-grid {
+    @apply grid grid-cols-1 lg:grid-cols-5 gap-8;
+  }
+  
+  .dashboard-sidebar {
+    @apply lg:col-span-2;
+  }
+  
+  .dashboard-main {
+    @apply lg:col-span-3;
+  }
+  
+  /* Navigation Components */
+  .nav-item {
+    @apply flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors duration-200 focusable;
+  }
+  
+  .nav-item-active {
+    @apply bg-mint-100 text-mint-800 border-l-4 border-mint-500;
+  }
+  
+  .nav-item-inactive {
+    @apply text-professional-600 hover:text-professional-800 hover:bg-professional-50;
+  }
+  
+  /* Header Components */
+  .header-container {
+    @apply bg-card shadow-card border-b border-professional-200;
+  }
+  
+  .header-content {
+    @apply container mx-auto px-4 flex items-center justify-between h-16;
+  }
+  
+  .header-logo {
+    @apply text-heading-2 text-professional-800 font-heading;
+  }
+  
+  .header-user-info {
+    @apply text-right;
+  }
+  
+  .header-avatar {
+    @apply h-8 w-8 rounded-full bg-mint-500 flex items-center justify-center text-white text-sm font-medium;
+  }
+}
+
+@layer utilities {
+  /* Focus indicators for accessibility */
+  .focusable:focus {
+    @apply outline-none ring-2 ring-mint-500 ring-offset-2;
+  }
+  
+  /* Enhanced focus for high contrast */
+  .focusable:focus-visible {
+    @apply outline-2 outline-mint-600 outline-offset-2;
+  }
+  
+  /* Text utilities following design system */
+  .text-heading-1 {
+    @apply text-4xl leading-tight font-semibold text-professional-800 font-heading;
+  }
+  
+  .text-heading-2 {
+    @apply text-2xl leading-8 font-semibold text-professional-800 font-heading;
+  }
+  
+  .text-heading-3 {
+    @apply text-xl leading-7 font-medium text-professional-800 font-heading;
+  }
+  
+  .text-body-main {
+    @apply text-base leading-6 font-normal text-professional-800 font-body;
+  }
+  
+  .text-body-small {
+    @apply text-sm leading-5 font-normal text-professional-600 font-body;
+  }
+  
+  /* Skip link for screen readers */
+  .skip-link {
+    @apply absolute -top-10 left-6 bg-mint-500 text-white px-4 py-2 rounded-md z-50 transition-all duration-200;
+  }
+  
+  .skip-link:focus {
+    @apply top-6;
+  }
+}
+
+/* Responsive Design Support */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    @apply grid-cols-1;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .appointment-card {
+    @apply border border-professional-800;
+  }
+  
+  .card {
+    @apply border border-professional-300;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .appointment-card,
+  .card,
+  .btn-primary,
+  .btn-secondary,
+  .calendar-day {
+    @apply transition-none;
+  }
+}
