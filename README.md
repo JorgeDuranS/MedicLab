@@ -1,3 +1,21 @@
+
+# 🚩 Cómo clonar este repositorio (principiantes)
+
+Sigue estos pasos para obtener una copia de este proyecto en tu computadora:
+
+1. **Abre una terminal o PowerShell** en la carpeta donde quieras guardar el proyecto.
+2. **Clona el repositorio usando HTTPS:**
+   ```bash
+   git clone https://github.com/JorgeDuranS/MedicLab.git
+   ```
+3. **Entra a la carpeta del proyecto:**
+   ```bash
+   cd MedicLab/mediclab
+   ```
+4. ¡Listo! Ahora puedes seguir las instrucciones de instalación más abajo.
+
+> 💡 Si nunca has usado Git, solo copia y pega los comandos uno por uno en tu terminal.
+
 # 📚 Documentación y Recursos Importantes
 
 Para aprender y profundizar en la seguridad y pruebas de este proyecto, revisa los siguientes documentos incluidos en el repositorio:
